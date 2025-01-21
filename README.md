@@ -39,7 +39,7 @@ This project is a simple implementation of a **Student Management System** using
 
 ### Clone the Repository
 ```bash
-git clone https://github.com/your-username/java-crud.git
+git clone https://github.com/shankar4112/Student-Management-System---Spring-Boot-Frontend-Integration.git
 cd java-crud
 ```
 
