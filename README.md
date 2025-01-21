@@ -88,8 +88,8 @@ cd java-crud
 
 ## Contributors
 
-- **[Your Name](https://github.com/your-username)**
-- **Friends' Names**
+- **[Gowri Shankar V](https://github.com/shankar4112/)**
+- **[Abhinaya]**(
 
 ## License
 
