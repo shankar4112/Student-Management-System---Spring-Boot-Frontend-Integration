@@ -1,146 +1,100 @@
-Java-CRUD
+# Java-CRUD
 
-This project is a simple implementation of a Student CRUD (Create, Read, Update, Delete) System using Java and Spring Boot. It includes functionality for managing student data with login credentials, providing an intuitive user interface for interacting with the system. The project was completed as a collaborative effort with my friends.
+This project is a simple implementation of a **Student Management System** using **Java** and **Spring Boot**. It provides basic **CRUD (Create, Read, Update, Delete)** operations for managing student information. The system includes features such as login authentication and a responsive frontend for user interaction.
 
-Features
+## Features
 
-Student Management:
+- **Add New Students:** Enter details like roll number, first name, last name, and email.
+- **View All Students:** Display a list of all students in a tabular format.
+- **Update Student Details:** Modify student information.
+- **Delete Students:** Remove a student's record from the system.
+- **Login Functionality:** Secure access using login credentials.
+- **User-Friendly UI:** Responsive and easy-to-navigate interface.
 
-Add new students.
+## Technologies Used
 
-View student details.
+### Backend
+- **Java**: Core programming language.
+- **Spring Boot**: Framework for building REST APIs.
+- **Jakarta Persistence API (JPA)**: For database operations.
+- **H2 Database**: In-memory database for testing.
 
-Update existing student information.
+### Frontend
+- **HTML/CSS**: For responsive design.
+- **JavaScript**: To handle dynamic data rendering and event handling.
 
-Delete student records.
+### Tools
+- **Postman**: For testing APIs.
+- **Maven**: Build automation tool.
+- **IDE**: IntelliJ IDEA or Eclipse.
 
-Authentication:
+## Prerequisites
 
-Secure login system for accessing the application.
+- Java Development Kit (JDK 11 or higher)
+- Maven
+- Spring Boot
+- IDE (IntelliJ IDEA, Eclipse, or similar)
 
-Frontend:
+## Getting Started
 
-Responsive and user-friendly design.
-
-Utilizes HTML, CSS, and JavaScript for a seamless experience.
-
-Backend:
-
-Built using Spring Boot.
-
-RESTful API endpoints for CRUD operations.
-
-Technologies Used
-
-Frontend:
-
-HTML5
-
-CSS3
-
-JavaScript
-
-Backend:
-
-Java
-
-Spring Boot
-
-Database:
-
-MySQL (or replace with your chosen database system)
-
-Prerequisites
-
-Before running this project, ensure you have the following installed:
-
-Java Development Kit (JDK) 8 or above
-
-MySQL Database
-
-Maven (for building the project)
-
-Spring Boot
-
-Installation and Setup
-
-Clone the Repository:
-
+### Clone the Repository
+```bash
 git clone https://github.com/your-username/java-crud.git
 cd java-crud
+```
 
-Configure the Database:
+### Backend Setup
+1. Open the project in your preferred IDE.
+2. Update `application.properties` if needed (e.g., database configuration):
+   ```properties
+   spring.datasource.url=jdbc:h2:mem:testdb
+   spring.datasource.driverClassName=org.h2.Driver
+   spring.datasource.username=sa
+   spring.datasource.password=password
+   spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
+   ```
+3. Build and run the application:
+   ```bash
+   mvn spring-boot:run
+   ```
 
-Create a database named student_db.
+### Frontend Setup
+1. Open the `index.html` file in any browser to access the frontend.
+2. Ensure the backend is running at `http://localhost:8080`.
 
-Update the application.properties file in the Spring Boot project with your database credentials:
+## API Endpoints
 
-spring.datasource.url=jdbc:mysql://localhost:3306/student_db
-spring.datasource.username=your-username
-spring.datasource.password=your-password
-spring.jpa.hibernate.ddl-auto=update
+| HTTP Method | Endpoint                 | Description              |
+|-------------|--------------------------|--------------------------|
+| GET         | `/api/v1/students1`      | Get all students         |
+| POST        | `/api/v1/students1`      | Add a new student        |
+| PUT         | `/api/v1/students1/{id}` | Update a student by ID   |
+| DELETE      | `/api/v1/students1/{id}` | Delete a student by ID   |
 
-Build the Project:
+## Usage
 
-mvn clean install
+1. Start the Spring Boot server using Maven.
+2. Access the frontend through `index.html`.
+3. Use the web interface to manage student records.
+4. Test API endpoints using tools like Postman or cURL.
 
-Run the Application:
+## Screenshots
 
-mvn spring-boot:run
+### Homepage
+![Homepage Screenshot](https://via.placeholder.com/800x400.png?text=Homepage)
 
-Access the Application:
+### Student Table
+![Student Table Screenshot](https://via.placeholder.com/800x400.png?text=Student+Table)
 
-Open your browser and navigate to http://localhost:8080.
+## Contributors
 
-API Endpoints
+- **[Your Name](https://github.com/your-username)**
+- **Friends' Names**
 
-Get All Students: GET /api/v1/students1
+## License
 
-Add a Student: POST /api/v1/students1
+This project is licensed under the [MIT License](LICENSE).
 
-Update a Student: PUT /api/v1/students1/{id}
+---
 
-Delete a Student: DELETE /api/v1/students1/{id}
-
-Usage
-
-Login: Enter valid credentials to access the student management system.
-
-Manage Students: Use the table interface to view, add, update, or delete student records.
-
-Logout: Securely log out after completing your tasks.
-
-Project Structure
-
-java-crud/
-├── src/
-│   ├── main/
-│   │   ├── java/net/javaguides/springboot/
-│   │   │   ├── controller/
-│   │   │   ├── model/
-│   │   ├── resources/
-│   └── test/
-└── pom.xml
-
-Contributors
-
-This project was developed in collaboration with:
-
-Your Name
-
-Friend 1 Name
-
-Friend 2 Name
-
-License
-
-This project is licensed under the MIT License.
-
-Acknowledgments
-
-Spring Boot Documentation: https://spring.io/projects/spring-boot
-
-MySQL Documentation: https://dev.mysql.com/doc/
-
-CSS Gradient Generator: https://cssgradient.io/
-
+Feel free to contribute to this project by submitting issues or pull requests. Happy coding!
